@@ -1,0 +1,18 @@
+@TTL 10m
+@	 IN	 SOA	 pc126.ws.sdnog.sd. (
+	2022021000 ; Serial, please adjust to appropriate date
+	10m ; Refresh - how soon the backup will check for new records
+	10m ; Retry - how soon the backup should retry if Refresh fails
+	4w  ; Expire - how soon to expire the records if server unreachable
+	10m ) ; Negative - how soon DNS resolvers should retry for non-existent RRs 
+	
+	IN	 NS	 ns.pc126.ws.sdnog.sd. ; master, this is your server 
+	IN	 NS	 ns.pc137.ws.sdnog.sd. ; slave, this is your backup's Name Server 
+	
+@	IN	 A	 192.168.11.126 ; your own IP
+	IN	 AAAA	 2a02:c207:2054:4961:bbbb::126
+ns	IN	 A	 192.168.11.126 ; your own IP
+ns	IN	 AAAA	 2a02:c207:2054:4961:bbbb::126
+www	IN	 A	 10.10.10.10
+cloud	IN	 A	 10.10.10.0 
+
