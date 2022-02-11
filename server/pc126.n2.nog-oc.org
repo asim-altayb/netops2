@@ -6,10 +6,10 @@ $TTL 10m
 4w ; Expire - how soon to expire the records if server unreachable
 10m ) ; Negative - how soon DNS resolvers should retry for non-existent RRs
 
-IN NS ns.pc126.n2.nog-oc.org. ; master, this is your server
-IN NS ns.pc126.n2.nog-oc.org. ; slave, this is your backup's Name Server
+    IN NS ns.pc126.n2.nog-oc.org. ; master, this is your server
+    IN NS ns.pc126.n2.nog-oc.org. ; slave, this is your backup's Name Server
 
-@ IN A 192.168.10.126 ; your own IP
-IN AAAA 2a02:c207:2054:4961:aaaa::100
-ns IN A 192.168.10.126 ; your own IP
-ns IN AAAA 2a02:c207:2054:4961:aaaa::126
+@ IN A 192.168.11.126 ; your own IP
+IN AAAA 2a02:c207:2054:4961:bbbb::126
+ns IN A 192.168.11.126 ; your own IP
+ns IN AAAA 2a02:c207:2054:4961:bbbb::126
